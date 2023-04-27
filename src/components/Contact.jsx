@@ -5,9 +5,7 @@ import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
 import emailjs, { sendForm } from '@emailjs/browser'
-//template_5n5kuvq
-//service_i0mnh19
-//Oaa0-GEQUK9YAbxpe
+
 const Contact = () => {
   const formRef = useRef()
   const [form,setForm] = useState({
@@ -23,15 +21,15 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     emailjs.send(
-      'service_i0mnh19',
-      'template_90xovdg',
+      'service_email-api-key form email js website',
+      'template_email-api-key form email js website',
       {
         form_name:form.name,
         to_name:'Md',
         to_email:'mdyusuf742171@gmail.com',
         message:form.message,
       },
-      'Oaa0-GEQUK9YAbxpe'
+      'something form email-api-key form email js website😂'
     )
     .then(() => {
       setLoading(false);
